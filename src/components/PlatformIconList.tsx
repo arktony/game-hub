@@ -12,6 +12,7 @@ import { MdPhoneIphone } from "react-icons/md";
 import { SiNintendo } from "react-icons/si";
 import { BsGlobe } from "react-icons/bs";
 import { IconType } from "react-icons";
+import CriticScore from "./CriticScore";
 
 interface Props {
   platforms: Platform[];
