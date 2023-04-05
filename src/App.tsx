@@ -12,6 +12,7 @@ export interface GameQuery {
   genre: Genre | null;
   platform: Platform | null;
   sortOrder: string;
+  searchText: string;
 }
 function App({ genre, platform, sortOrder }: GameQuery) {
   const [gameQuery, setGameQuery] = useState<GameQuery>({} as GameQuery);
@@ -23,7 +24,9 @@ function App({ genre, platform, sortOrder }: GameQuery) {
       }}
     >
       <GridItem area="nav">
-        <NavBar />
+        <NavBar
+          onSearch={(searchText) => setGameQuery({ ...gameQuery, searchText })}
+        />
       </GridItem>
       <Show above="md">
         <GridItem area="aside" paddingX={5}>
